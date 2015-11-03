@@ -9,9 +9,20 @@
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" href="css/index.css" />
         <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src='js/diary.js'></script>
 </head>
 <body>
     <h1>My Diary Entries</h1>
+     <form id='add-text'>
+       <label for= "subject">Subject</label>
+        <input class='field' id= "subject" type='text' name='subject'/>
+        <label for= "textarea">Body</label>
+        <textarea class= "field" id = "textarea"></textarea>
+        <div class='actions'>
+          <button type="submit" onclick='okEdit()'>Ok!!!</button>
+          <button onclick='cancelEdit()'>Cancel!!!</button>
+        </div>
+      </form>
     <section class='entries'>
       <article >
         <h2>Wrote my first mobile application</h2>
