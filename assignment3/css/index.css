@@ -1,0 +1,52 @@
+.ui-collapsible-content {
+    -webkit-transition: all 3s;
+    -moz-transition: all 3s;
+    -ms-transition: all 3s;
+    -o-transition: all 3s;
+    transition: all 3s;
+    height: auto; /* or auto */
+    overflow: hidden;
+    opacity:1.0;
+}
+.ui-collapsible-content-collapsed {
+    display: block;
+    height: 0;
+    padding: 0 16px;
+    opacity:0;
+}
+
+h1 {
+  text-align:center;
+  color:#A52424;
+  text-shadow:2px 2px 3px #AAA; 
+  
+}
+
+.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {
+  background-color:#CDD0E4;
+}
+
+@media (max-width:600px) and (min-width:400px) {
+  .ui-btn {
+    font-size:.8em;
+  }
+  p {
+    font-size:1em;
+  }
+}
+
+@media (min-height:500px) {
+  .ui-collapsible-inset, .ui-collapsible-set {
+    margin-top:5em;
+  }
+}
+
+@media (min-width:601px) {
+  .ui-btn {
+    font-size:1em;
+  }
+
+  h1 {
+    font-size:3em;
+  }
+}
