@@ -1,6 +1,5 @@
 $(document).ready(function() {
   showEntries();
-  addAttr();
 });
 
 $(document).bind('mobileinit',function(){
