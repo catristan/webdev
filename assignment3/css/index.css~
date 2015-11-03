@@ -1,3 +1,19 @@
+.ui-collapsible-content {
+    -webkit-transition: all 3s;
+    -moz-transition: all 3s;
+    -ms-transition: all 3s;
+    -o-transition: all 3s;
+    transition: all 3s;
+    height: auto; /* or auto */
+    overflow: hidden;
+    opacity:1.0;
+}
+.ui-collapsible-content-collapsed {
+    display: block;
+    height: 0;
+    padding: 0 16px;
+    opacity:0;
+}
 
 h1 {
   text-align:center;
