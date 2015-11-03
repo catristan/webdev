@@ -10,7 +10,7 @@
         else {
             data = JSON.parse(data);
         }
-        var $posts = $(".entries");
+        var $posts = $("#entries");
         $posts.empty();
         $.each(data, function (i, post) {
             $posts.append($("<article class='post'></article>").append($(post)));
