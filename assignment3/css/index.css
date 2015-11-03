@@ -57,9 +57,14 @@ h1 {
     margin-left:10%;
 }
 
-#add-entry-button, #ok-button, #cancel-button {
+#add-entry-button {
     width:30%;
     margin-left:35%;
+}
+
+#ok-button, #cancel-button {
+  width:30%;
+  display: inline;
 }
 
 label[for=subject] {
