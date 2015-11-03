@@ -7,6 +7,7 @@ $(document).bind('mobileinit',function(){
     $.mobile.changePage.defaults.changeHash = false;
     $.mobile.hashListeningEnabled = false;
     $.mobile.pushStateEnabled = false;
+    $mobile.changePage.defaults.allowSamePageTransition = true;
 });
 
 function addAttr(){
@@ -16,7 +17,7 @@ function addAttr(){
   $(section).attr("data-role", "collapsibleset");
 }
 
-    function showEntries () {
+    function showEntries() {
         var data = localStorage.getItem("data");
         if (!data) {
             data = [
