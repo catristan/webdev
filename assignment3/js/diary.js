@@ -37,7 +37,6 @@
         var subject = $("#add-text input").val();
         if (!subject) {
             alert("Subject is required");
-            return;
         }
         var body = $("#add-text textarea").val();
         if (!body) {
