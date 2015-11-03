@@ -1,21 +1,6 @@
 $(document).ready(function() {
   showEntries();
-  addAttr();
 });
-
-$(document).bind('mobileinit',function(){
-    $.mobile.changePage.defaults.changeHash = false;
-    $.mobile.hashListeningEnabled = false;
-    $.mobile.pushStateEnabled = false;
-    $mobile.changePage.defaults.allowSamePageTransition = true;
-});
-
-function addAttr(){
-  var add = document.getElementsByTagName("ARTICLE");
-  var section = document.getElementsByTagName("SECTION");
-  $(add).attr("data-role", "collapsible");
-  $(section).attr("data-role", "collapsibleset");
-}
 
     function showEntries() {
         var data = localStorage.getItem("data");

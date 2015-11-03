@@ -17,7 +17,7 @@ function addAttr(){
   $(section).attr("data-role", "collapsibleset");
 }
 
-    function showEntries () {
+    function showEntries() {
         var data = localStorage.getItem("data");
         if (!data) {
             data = [
