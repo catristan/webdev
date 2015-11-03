@@ -47,7 +47,6 @@ function addAttr(){
     }
 
    $(document).on('click', '#add-entry-button', function(e) {
-	console.log('click');
         $("#add-text").css("display", "block").find("input").focus();
     });
     $(document).on('click', '#okButton', function(e) {
