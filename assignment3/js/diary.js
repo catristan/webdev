@@ -33,7 +33,7 @@
     exports.addTxt = function () {
         $("#add-text").css("display", "block").find("input").focus();
     };
-    exports.addEntry = function () {
+    exports.addEntryButton = function () {
         var subject = $("#add-text input").val();
         if (!subject) {
             alert("Subject is required");
