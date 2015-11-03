@@ -52,7 +52,7 @@ h1 {
 }
 
 #add-text {
-    display: none;
+    display:none;
     width:80%;
     margin-left:10%;
 }
@@ -82,4 +82,12 @@ textarea {
   height:15em;
   border:1px dotted #777;
   font-family:inherit;
+}
+
+#errorSubject {
+  display:none;
+}
+
+#errorBody {
+  display:none;
 }

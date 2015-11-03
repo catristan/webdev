@@ -5,25 +5,25 @@
   <title>Assignment 3 part 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" href="css/index.css" />
 	<script src='js/diary.js'></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
     <h1>My Diary Entries</h1>
      <form id='add-text'>
-       <label for= "subject">Subject</label>
+       <label for= "subject">Subject</label> <p id= "errorSubject">Please Enter a Subject!</p>
         <input class='field' id= "subject" type='text' name='subject'/>
-        <label for= "textarea">Body</label>
+        <label for= "textarea">Body</label> <p id= "errorBody">Please Enter a Body!</p>
         <textarea class= "field" id = "textarea"></textarea>
         <div class='actions'>
-          <button id= "ok-button" type="submit" onclick='addEntryButton()'>Add Entry</button>
-          <button id= "cancel-button" onclick='cancelEdit()'>Cancel</button>
+          <button id= "ok-button" type="submit">Add Entry</button>
+          <button id= "cancel-button">Cancel</button>
         </div>
       </form>
-    <button id= "add-entry-button" href='#' onclick='addTxt()'>Add A Text Entry!</button>
+    <button id= "add-entry-button">Add A Text Entry!</button>
     <section id='entries'></section>
 </body>
 </html>

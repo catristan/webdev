@@ -1,5 +1,6 @@
-
-(function (exports, $) {
+$(document).ready(function() {
+  showEntries();
+});
     function showEntries () {
         var data = localStorage.getItem("data");
         if (!data) {
@@ -30,28 +31,27 @@
         localStorage.setItem("data", JSON.stringify(data));
     }
 
-    exports.addTxt = function () {
+   $(document).on('click', '#add-entry-button', function(e) {
+	console.log('click');
         $("#add-text").css("display", "block").find("input").focus();
-    };
-    exports.addEntryButton = function () {
-        var subject = $("#add-text input").val();
+    });
+    $(document).on('click', '#okButton', function(e) {
+        var subject = $("#subject").val();
+	var body = $("#textarea").val();
         if (!subject) {
-            alert("Subject is required");
+            $("#errorSubject").css("display", "block");
+	    $("#add-text").css("display", "block").find("input").focus();
         }
-        var body = $("#add-text textarea").val();
         if (!body) {
-            alert("Body is required");
-            return;
+            $("#errorBody").css("display", "block");
+	    $("#add-text").css("display", "block").find("textarea").focus();
         }
-        addEntry(subject, body);
-        exports.cancelEdit();
-        showEntries();
-    };
-    exports.cancelEdit = function () {
-        $("#add-text input").val("");
-        $("#add-text textarea").val("");
+        if (subject && body) {
+          addEntry(subject, body);
+          cancelEdit();
+          showEntries();
+	}
+    });
+    $(document).on('click', '#cancelButton', function(e) {
         $("#add-text").hide();
-    };
-    
-    $(showEntries);
-})(window, jQuery);
+    });
