@@ -6,6 +6,9 @@ $(document).bind('mobileinit',function(){
     $.mobile.changePage.defaults.changeHash = false;
     $.mobile.hashListeningEnabled = false;
     $.mobile.pushStateEnabled = false;
+    $.mobile.changePage.allowSamePageTransition = true;
+    $.mobile.ajaxEnabled = false;
+    $.mobile.linkBindingEnabled = false;
 });
 
 function addAttr(){

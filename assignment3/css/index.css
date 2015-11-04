@@ -10,33 +10,8 @@ h1 {
   background-color:#CDD0E4;
 }
 
-@media (max-width:600px) and (min-width:400px) {
-  .ui-btn {
-    font-size:.8em;
-  }
-  p {
-    font-size:1em;
-  }
-}
-
-@media (min-height:500px) {
-  .ui-collapsible-inset, .ui-collapsible-set {
-    margin-top:5em;
-  }
-}
-
-@media (min-width:601px) {
-  .ui-btn {
-    font-size:1em;
-  }
-
-  h1 {
-    font-size:3em;
-  }
-}
-
 #add-text {
-    display:none;
+    
     width:80%;
     margin-left:10%;
 }
@@ -68,10 +43,49 @@ textarea {
   font-family:inherit;
 }
 
-#errorSubject {
+#errorSubject, #errorBody {
   display:none;
+  color: #AD0A0A;
+  font-weight:700;
+  text-align:center; 
+  border:2px solid #AD0A0A;
 }
 
-#errorBody {
-  display:none;
+div > .delete {
+  width:5em;
+  padding:.4em;
+  float: right;
 }
+
+@media (max-width:600px) and (min-width:400px) {
+  .ui-btn {
+    font-size:.8em;
+  }
+  p {
+    font-size:1em;
+  }
+}
+
+@media (max-width:500px) {
+   #add-entry-button {
+    width:90%;
+    margin-left:5%;
+  }
+}
+
+@media (min-height:500px) {
+  .ui-collapsible-inset, .ui-collapsible-set {
+    margin-top:5em;
+  }
+}
+
+@media (min-width:601px) {
+  .ui-btn {
+    font-size:1em;
+  }
+
+  h1 {
+    font-size:3em;
+  }
+}
+
