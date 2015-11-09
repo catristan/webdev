@@ -1,6 +1,20 @@
+
 $(document).ready(function() {
   showEntries();
 });
+
+var zone = "none"
+var district = "none";
+
+jQuery(document).ready(function($) {
+    jQuery.getScript('http://www.geoplugin.net/javascript.gp', function() 
+{
+    zone = geoplugin_region();
+    district = geoplugin_city();
+    console.log("Your location is: " + ", " + zone + ", " + district);
+});
+});
+      
 
     function showEntries() {
         var data = localStorage.getItem("data");
@@ -19,7 +33,7 @@ $(document).ready(function() {
         });
     }
 
-    function addEntry (subject, body) {
+    function addEntry (subject, body, zone, district) {
         var data = localStorage.getItem("data");
         if (data) data = JSON.parse(data);
         else data = [];
@@ -28,11 +42,11 @@ $(document).ready(function() {
         $("<h2></h2>").text(subject).appendTo($cont);
         $("<button class='delete'>Delete</button>").appendTo($cont);
         $("<div class='date'></div>").text((new Date).toLocaleString()).appendTo($cont);
+	$("<div class= 'location'></div>").text(district + ", " + zone).appendTo($cont);
         $("<p></p>").html(body).appendTo($cont);
         data.unshift($cont.html());
         localStorage.setItem("data", JSON.stringify(data));
     }
-
 
   $(document).on('click', '.delete', function(e){
     var element = $(e.target).closest('article');
@@ -59,7 +73,7 @@ $(document).ready(function() {
 	    return false;
         }
         else {
-          addEntry(subject, body);
+          addEntry(subject, body, zone, district);
           showEntries();
 	}
     });
