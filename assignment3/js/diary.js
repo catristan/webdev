@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
 	    return false;
         }
         else {
-          addEntry(subject, body, zone, district);
+          addEntry(subject, body, state, city);
           showEntries();
 	}
     });
