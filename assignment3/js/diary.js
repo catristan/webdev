@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
         });
     }
 
-    function addEntry (subject, body, zone, district) {
+    function addEntry (subject, body, state, city) {
         var data = localStorage.getItem("data");
         if (data) data = JSON.parse(data);
         else data = [];
@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
         $("<h2></h2>").text(subject).appendTo($cont);
         $("<button class='delete'>Delete</button>").appendTo($cont);
         $("<div class='date'></div>").text((new Date).toLocaleString()).appendTo($cont);
-	$("<div class= 'location'></div>").text(district + ", " + zone).appendTo($cont);
+	$("<div class= 'location'></div>").text(city + ", " + state).appendTo($cont);
         $("<p></p>").html(body).appendTo($cont);
         data.unshift($cont.html());
         localStorage.setItem("data", JSON.stringify(data));
