@@ -3,15 +3,17 @@ $(document).ready(function() {
   showEntries();
 });
 
-var zone = "none"
-var district = "none";
+//Implemented Geoplugin instead of Geolocation as it is safer and compatible with more broswers. Google Chrome virtually blocks geolocation unless on a HTTPS site and Firefox
+//at times does not allow it unless with admin permissions
+
+var state = "none"
+var city = "none";
 
 jQuery(document).ready(function($) {
     jQuery.getScript('http://www.geoplugin.net/javascript.gp', function() 
 {
-    zone = geoplugin_region();
-    district = geoplugin_city();
-    console.log("Your location is: " + ", " + zone + ", " + district);
+    state = geoplugin_region();
+    city = geoplugin_city();
 });
 });
       
@@ -48,6 +50,7 @@ jQuery(document).ready(function($) {
         localStorage.setItem("data", JSON.stringify(data));
     }
 
+
   $(document).on('click', '.delete', function(e){
     var element = $(e.target).closest('article');
     var key = element.attr("key");
@@ -81,3 +84,5 @@ jQuery(document).ready(function($) {
     $(document).on('click', '#cancel-button', function(e) {
         $("#wrapper").addClass('ui-screen-hidden');
     });
+
+
