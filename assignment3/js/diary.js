@@ -60,6 +60,7 @@ jQuery(document).ready(function($) {
     element.remove();
   });
 
+
    $(document).on('click', '#add-entry-button', function(e) {
         $("#wrapper").removeClass("ui-screen-hidden");
     });

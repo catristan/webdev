@@ -57,6 +57,10 @@ div > .delete {
   float: right;
 }
 
+.swipeLeft {
+  background-image:url("css/images/ocean.jpg");
+}
+
 @media (max-width:600px) and (min-width:400px) {
   .ui-btn {
     font-size:.8em;

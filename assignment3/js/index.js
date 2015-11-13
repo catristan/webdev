@@ -17,3 +17,5 @@ function addAttr(){
   $(add).attr("data-role", "collapsible");
   $(section).attr("data-role", "collapsibleset");
 }
+
+
